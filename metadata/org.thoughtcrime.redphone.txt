@@ -1,0 +1,40 @@
+Categories:Phone & SMS
+License:GPLv3
+Web Site:https://whispersystems.org/
+Source Code:https://github.com/WhisperSystems/RedPhone
+Issue Tracker:https://github.com/WhisperSystems/RedPhone/issues
+
+Auto Name:RedPhone
+Summary:Make encrypted phone calls
+Description:
+RedPhone makes private communication simple. Free, world-wide, end-to-end encryption for your calls, securing your conversations so that nobody can listen in.
+
+* RedPhone uses your normal phone number to make and receive calls, so you don't need yet another identifier.
+* RedPhone calls are encrypted end-to-end, but function just like you're used to.
+* Free and Open Source, enabling anyone to verify its security by auditing the code.
+* Uses wifi or data, not your plan's voice minutes.
+* All RedPhone calls are free, including long distance and international.
+.
+
+Repo Type:git
+Repo:https://github.com/WhisperSystems/RedPhone
+
+Build:1.0.2,29
+    commit=v1.0.2
+    gradle=yes
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
+    rm=libs/*
+    buildjni=jni
+
+Build:1.0.3,30
+    commit=v1.0.3
+    gradle=yes
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
+    rm=libs/*
+    buildjni=jni
+
+Auto Update Mode:Version v%v
+Update Check Mode:Tags
+Current Version:1.0.3
+Current Version Code:30
+

@@ -1,0 +1,11 @@
+archive/
+build/
+builder/
+logs/
+repo/
+srclibs/
+tmp/
+unsigned/
+config.py
+fdroid-icon.png
+.fdroid*
