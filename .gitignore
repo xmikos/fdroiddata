@@ -9,3 +9,4 @@ unsigned/
 config.py
 fdroid-icon.png
 .fdroid*
+*.apk
