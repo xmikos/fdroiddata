@@ -22,15 +22,15 @@ Repo:https://github.com/WhisperSystems/RedPhone
 Build:1.0.2,29
     commit=v1.0.2
     gradle=yes
-    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
     rm=libs/*
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
     buildjni=jni
 
 Build:1.0.3,30
     commit=v1.0.3
     gradle=yes
-    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
     rm=libs/*
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
     buildjni=jni
 
 Auto Update Mode:Version v%v
