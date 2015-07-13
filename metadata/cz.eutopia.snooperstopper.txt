@@ -1,0 +1,32 @@
+Categories:System
+License:GPLv3
+Web Site:https://github.com/xmikos/SnooperStopper
+Source Code:https://github.com/xmikos/SnooperStopper
+Issue Tracker:https://github.com/xmikos/SnooperStopper/issues
+
+Auto Name:SnooperStopper
+Summary:Android device ecryption password manager and failed unlock attempts monitor
+Description:
+SnooperStopper allows you to have different device encryption password than
+screen unlock pattern/PIN/password. You can have strong device encryption
+password (which you only need to enter once after booting your device) but
+simple pattern/PIN/password for unlocking your screen.
+
+If attacker tries to guess your simple pattern/PIN/password, he has only
+few tries (default is 3) after which the device is rebooted and he needs
+to enter your strong device encryption password again.
+.
+
+Repo Type:git
+Repo:https://github.com/xmikos/SnooperStopper
+
+Build:1.0,1
+    commit=v1.0
+    subdir=app
+    gradle=yes
+
+Auto Update Mode:Version v%v
+Update Check Mode:Tags
+Current Version:1.0
+Current Version Code:1
+
