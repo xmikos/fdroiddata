@@ -39,8 +39,24 @@ Build:2.22.0,133
     commit=v2.22.0
     gradle=yes
 
+Build:2.22.2,135
+    commit=v2.22.2
+    gradle=yes
+
+Build:2.23.3,139
+    commit=v2.23.3
+    gradle=yes
+
+Build:2.25.1,143
+    commit=v2.25.1
+    gradle=yes
+
+Build:2.25.3,145
+    commit=v2.25.3
+    gradle=yes
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:2.22.0
-Current Version Code:133
+Current Version:2.25.3
+Current Version Code:145
 
