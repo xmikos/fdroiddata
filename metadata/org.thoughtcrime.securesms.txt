@@ -55,8 +55,12 @@ Build:2.25.3,145
     commit=v2.25.3
     gradle=yes
 
+Build:2.26.0,146
+    commit=v2.26.0
+    gradle=yes
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:2.25.3
-Current Version Code:145
+Current Version:2.26.0
+Current Version Code:146
 
