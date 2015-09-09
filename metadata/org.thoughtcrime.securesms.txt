@@ -63,8 +63,12 @@ Build:2.26.1,147
     commit=797513b3724e639bde8b0f1e26b47ac46c0ee8bc
     gradle=yes
 
+Build:2.26.2,148
+    commit=v2.26.2
+    gradle=yes
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:2.26.1
-Current Version Code:147
+Current Version:2.26.2
+Current Version Code:148
 
