@@ -21,9 +21,17 @@ from the main repository):
 - [https://eutopia.cz/fdroid/archive](https://eutopia.cz/fdroid/archive?fingerprint=A0E4D1D912D8B81809AB18F5B7CF562CD1A10533ED4F7B25E595ABC8D862AD87)
 
 There is also experimental repository, where you will find only WebSocket-based fork
-of TextSecure for now:
+of TextSecure for now (renamed to TextLibre):
 
 - [https://eutopia.cz/experimental/fdroid/repo](https://eutopia.cz/experimental/fdroid/repo?fingerprint=A0E4D1D912D8B81809AB18F5B7CF562CD1A10533ED4F7B25E595ABC8D862AD87)
+
+Why have TextSecure and RedPhone been renamed?
+----------------------------------------------
+
+Moxie Marlinspike apparently doesn't like the idea of independent builds of TextSecure
+and RedPhone so much, that he started with legal threats on Twitter. Independent builds
+of TextSecure have been therefore renamed to **TextLibre** and RedPhone to **PhoneLibre**.
+Application IDs are still the same, so you will not loose data after upgrade.
 
 Motivation
 ----------
@@ -44,7 +52,8 @@ TextSecure still needs Google Play Services (because it uses [Google Cloud Messa
 but you don't need Google Account and Google Play cannot silently update app that has been
 installed outside of Google Play store. Hopefully in the future, it will be possible to use
 official TextSecure client without Google Play Services (see issue [#1000](https://github.com/WhisperSystems/TextSecure/issues/1000) - 
-Websocket support, unfortunately Moxie also locked this discussion). For now there is unofficial
-[TextSecure fork](https://github.com/JavaJens/TextSecure) by JavaJens, which already uses
-WebSocket instead of GCM and therefore doesn't need Google Play Services. You can install it
-from my experimental F-Droid repository.
+Websocket support, unfortunately Moxie also locked this discussion).
+
+For now there is unofficial [TextSecure fork](https://github.com/JavaJens/TextSecure)
+by JavaJens, which already uses WebSocket instead of GCM and therefore doesn't need
+Google Play Services. You can install it from my experimental F-Droid repository.
