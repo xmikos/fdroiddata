@@ -4,16 +4,20 @@ Web Site:https://whispersystems.org/
 Source Code:https://github.com/WhisperSystems/RedPhone
 Issue Tracker:https://github.com/WhisperSystems/RedPhone/issues
 
+Name:PhoneLibre
 Auto Name:RedPhone
-Summary:Make encrypted phone calls
+Summary:Independent build of RedPhone
 Description:
-RedPhone makes private communication simple. Free, world-wide, end-to-end encryption for your calls, securing your conversations so that nobody can listen in.
+IMPORTANT NEWS: Independent build of RedPhone has to be renamed, because of legal threats by Moxie Marlinspike (author of RedPhone).
+For more info look at https://fdroid.eutopia.cz
 
-* RedPhone uses your normal phone number to make and receive calls, so you don't need yet another identifier.
-* RedPhone calls are encrypted end-to-end, but function just like you're used to.
+PhoneLibre makes private communication simple. Free, world-wide, end-to-end encryption for your calls, securing your conversations so that nobody can listen in.
+
+* PhoneLibre uses your normal phone number to make and receive calls, so you don't need yet another identifier.
+* PhoneLibre calls are encrypted end-to-end, but function just like you're used to.
 * Free and Open Source, enabling anyone to verify its security by auditing the code.
 * Uses wifi or data, not your plan's voice minutes.
-* All RedPhone calls are free, including long distance and international.
+* All PhoneLibre calls are free, including long distance and international.
 .
 
 Repo Type:git
