@@ -27,14 +27,16 @@ Build:1.0.2,29
     commit=v1.0.2
     gradle=yes
     rm=libs/*
-    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle && \
+        ../../scripts/rename_redphone.py .
     buildjni=jni
 
 Build:1.0.3,30
     commit=v1.0.3
     gradle=yes
     rm=libs/*
-    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle
+    prebuild=sed -i 's/gradle:0.12.2/gradle:1.0.1/' build.gradle && \
+        ../../scripts/rename_redphone.py .
     buildjni=jni
 
 Auto Update Mode:Version v%v

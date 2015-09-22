@@ -93,8 +93,13 @@ Build:2.26.5,151
     gradle=yes
     prebuild=../../scripts/rename_textsecure.py .
 
+Build:2.27.0,152
+    commit=v2.27.0
+    gradle=yes
+    prebuild=../../scripts/rename_textsecure.py .
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:2.26.5
-Current Version Code:151
+Current Version:2.27.0
+Current Version Code:152
 
