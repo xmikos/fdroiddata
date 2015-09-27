@@ -57,10 +57,26 @@ Build:2.26.1-websocket,10147
         sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
         sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
 
+Build:2.27.0-websocket,10152
+    commit=97d9e65043610d25cc928c59dc6aa3bcc17554d3
+    gradle=prod
+    forceversion=yes
+    forcevercode=yes
+    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
+        cd libtextsecure-java && \
+        git checkout fix/maven_local && \
+        ./gradlew tasks installArchives && \
+        cd .. && \
+        rm -rf libtextsecure-java && \
+        ../../scripts/rename_textsecure.py . && \
+        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
+        sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
+        sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest/feature/websocket-reborn
 Vercode Operation:%c+10000
 Update Check Name:org.thoughtcrime.securesms
-Current Version:2.26.1-websocket
-Current Version Code:10147
+Current Version:2.27.0
+Current Version Code:10152
 
