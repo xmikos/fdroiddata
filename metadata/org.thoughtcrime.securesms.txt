@@ -4,11 +4,11 @@ Web Site:https://whispersystems.org/
 Source Code:https://github.com/WhisperSystems/TextSecure
 Issue Tracker:https://github.com/WhisperSystems/TextSecure/issues
 
-Name:TextLibre
-Auto Name:TextSecure
-Summary:Independent build of TextSecure
+Name:LibreSignal
+Auto Name:Signal
+Summary:Independent build of Signal (previously TextSecure & RedPhone)
 Description:
-IMPORTANT NEWS: Independent build of TextSecure has to be renamed, because of legal threats by Moxie Marlinspike (author of TextSecure).
+IMPORTANT NEWS: Independent build of Signal (previously TextSecure & RedPhone) has been renamed, because of legal threats by Moxie Marlinspike (author of Signal).
 For more info look at https://fdroid.eutopia.cz
 
 TextLibre is a messaging app that allows you to take back your privacy while easily communicating with friends.
@@ -103,8 +103,20 @@ Build:2.27.2,154
     gradle=yes
     prebuild=../../scripts/rename_textsecure.py .
 
+Build:2.28.0,155
+    commit=v2.28.0
+    gradle=yes
+    prebuild=../../scripts/rename_textsecure.py .
+
+Build:3.0.1,158
+    commit=v3.0.1
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=../../scripts/rename_signal.py .
+    buildjni=jni
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:2.27.2
-Current Version Code:154
+Current Version:3.0.1
+Current Version Code:158
 

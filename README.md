@@ -25,13 +25,17 @@ of TextSecure for now (renamed to TextLibre):
 
 - [https://eutopia.cz/experimental/fdroid/repo](https://eutopia.cz/experimental/fdroid/repo?fingerprint=A0E4D1D912D8B81809AB18F5B7CF562CD1A10533ED4F7B25E595ABC8D862AD87)
 
-Why have TextSecure and RedPhone been renamed?
-----------------------------------------------
+Why have Signal, TextSecure and RedPhone been renamed?
+------------------------------------------------------
 
 Moxie Marlinspike apparently doesn't like the idea of independent builds of TextSecure
 and RedPhone so much, that he started with legal threats on Twitter. Independent builds
 of TextSecure have been therefore renamed to **TextLibre** and RedPhone to **PhoneLibre**.
-Application IDs are still the same, so you will not loose data after upgrade.
+
+Latest TextSecure for Android has been merged with RedPhone and is now Signal. Independent
+builds of Signal have been renamed to **LibreSignal**.
+
+Application IDs are still the same, so you will not lose data after upgrade.
 
 Motivation
 ----------
