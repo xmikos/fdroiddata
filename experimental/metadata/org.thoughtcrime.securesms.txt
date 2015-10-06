@@ -4,22 +4,22 @@ Web Site:https://whispersystems.org/
 Source Code:https://github.com/JavaJens/TextSecure/tree/feature/websocket-reborn
 Issue Tracker:https://github.com/JavaJens/TextSecure/issues
 
-Name:TextLibre (WebSocket)
-Auto Name:TextSecure
-Summary:Independent build of TextSecure (uses WebSocket instead of GCM)
+Name:LibreSignal (WebSocket)
+Auto Name:Signal
+Summary:Independent build of Signal (previously TextSecure & RedPhone) - uses WebSocket instead of GCM
 Description:
-IMPORTANT NEWS: Independent build of TextSecure has to be renamed, because of legal threats by Moxie Marlinspike (author of TextSecure).
+IMPORTANT NEWS: Independent build of Signal (previously TextSecure & RedPhone) has been renamed, because of legal threats by Moxie Marlinspike (author of Signal).
 For more info look at https://fdroid.eutopia.cz
 
-TextLibre is a messaging app that allows you to take back your privacy while easily communicating with friends.
-Using TextLibre, you can communicate instantly while avoiding SMS fees, create groups so that you can chat in real time with all your friends at once, and share media or attachments all with complete privacy. The server never has access to any of your communication and never stores any of your data.
+LibreSignal is a messaging app that allows you to take back your privacy while easily communicating with friends.
+Using LibreSignal, you can communicate instantly while avoiding SMS fees, create groups so that you can chat in real time with all your friends at once, and share media or attachments all with complete privacy. The server never has access to any of your communication and never stores any of your data.
 
 This is WebSocket-based fork by JavaJens which doesn't require Google Play Services to be installed (it doesn't use Google Cloud Messaging).
 
-* Private. TextLibre uses an advanced end to end encryption protocol that provides privacy for every message every time.
-* Open Source. TextLibre is Free and Open Source, enabling anyone to verify its security by auditing the code. TextLibre is the only private messenger that uses open source peer-reviewed cryptographic protocols to keep your messages safe.
-* Group Chat. TextLibre allows you to create encrypted groups so you can have private conversations with all your friends at once. Not only are the messages encrypted, but the TextLibre server never has access to any group metadata such as the membership list, group title, or group icon.
-* Fast. The TextLibre protocol is designed to operate in the most constrained environment possible. Using TextLibre, messages are instantly delivered to friends.
+* Private. LibreSignal uses an advanced end to end encryption protocol that provides privacy for every message every time.
+* Open Source. LibreSignal is Free and Open Source, enabling anyone to verify its security by auditing the code. LibreSignal is the only private messenger that uses open source peer-reviewed cryptographic protocols to keep your messages safe.
+* Group Chat. LibreSignal allows you to create encrypted groups so you can have private conversations with all your friends at once. Not only are the messages encrypted, but the LibreSignal server never has access to any group metadata such as the membership list, group title, or group icon.
+* Fast. The LibreSignal protocol is designed to operate in the most constrained environment possible. Using LibreSignal, messages are instantly delivered to friends.
 .
 
 Repo Type:git
@@ -73,10 +73,28 @@ Build:2.27.0-websocket,10152
         sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
         sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
 
+Build:3.0.1-websocket,10158
+    commit=d4f6b5faf63cbb3738cccb43c8969157252f5c72
+    gradle=prod
+    forceversion=yes
+    forcevercode=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
+        cd libtextsecure-java && \
+        git checkout fix/maven_local && \
+        ./gradlew tasks installArchives && \
+        cd .. && \
+        rm -rf libtextsecure-java && \
+        ../../scripts/rename_signal.py . && \
+        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
+        sed -i '/org.whispersystems:textsecure-android:56be70d/d' build.gradle && \
+        sed -i '/org.whispersystems:textsecure-java:88dc977/d' build.gradle
+    buildjni=jni
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest/feature/websocket-reborn
 Vercode Operation:%c+10000
 Update Check Name:org.thoughtcrime.securesms
-Current Version:2.27.0
-Current Version Code:10152
+Current Version:3.0.1
+Current Version Code:10158
 
