@@ -18,6 +18,8 @@ PhoneLibre makes private communication simple. Free, world-wide, end-to-end encr
 * Free and Open Source, enabling anyone to verify its security by auditing the code.
 * Uses wifi or data, not your plan's voice minutes.
 * All PhoneLibre calls are free, including long distance and international.
+
+Anti-Feature: Non-Free Network, since the servers run proprietary software.
 .
 
 Repo Type:git
