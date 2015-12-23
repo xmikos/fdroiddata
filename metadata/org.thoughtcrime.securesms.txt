@@ -1,8 +1,8 @@
 Categories:Phone & SMS
 License:GPLv3
 Web Site:https://whispersystems.org/
-Source Code:https://github.com/WhisperSystems/TextSecure
-Issue Tracker:https://github.com/WhisperSystems/TextSecure/issues
+Source Code:https://github.com/WhisperSystems/Signal-Android
+Issue Tracker:https://github.com/WhisperSystems/Signal-Android/issues
 
 Name:LibreSignal
 Auto Name:Signal
@@ -21,7 +21,7 @@ Using LibreSignal, you can communicate instantly while avoiding SMS fees, create
 .
 
 Repo Type:git
-Repo:https://github.com/WhisperSystems/TextSecure
+Repo:https://github.com/WhisperSystems/Signal-Android
 
 Build:2.18.2,128
     commit=v2.18.2
@@ -122,8 +122,29 @@ Build:3.0.2,159
     prebuild=../../scripts/rename_signal.py .
     buildjni=jni
 
+Build:3.3.1,164
+    commit=v3.3.1
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=../../scripts/rename_signal.py .
+    buildjni=jni
+
+Build:3.6.0,173
+    commit=v3.6.0
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=../../scripts/rename_signal.py .
+    buildjni=jni
+
+Build:3.8.1,179
+    commit=b80721ef4aa8c3b8ed743d502b7790b8b337ae51
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=../../scripts/rename_signal.py .
+    buildjni=jni
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:3.0.2
-Current Version Code:159
+Current Version:3.8.1
+Current Version Code:179
 
