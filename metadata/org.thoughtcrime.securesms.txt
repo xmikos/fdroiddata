@@ -143,8 +143,15 @@ Build:3.8.1,179
     prebuild=../../scripts/rename_signal.py .
     buildjni=jni
 
+Build:3.9.1,181
+    commit=v3.9.1
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=../../scripts/rename_signal.py .
+    buildjni=jni
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:3.8.1
-Current Version Code:179
+Current Version:3.9.1
+Current Version Code:181
 
