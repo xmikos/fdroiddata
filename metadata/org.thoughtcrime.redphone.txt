@@ -1,3 +1,4 @@
+AntiFeatures:NonFreeNet
 Categories:Phone & SMS
 License:GPLv3
 Web Site:https://whispersystems.org/

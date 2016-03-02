@@ -1,3 +1,4 @@
+AntiFeatures:NonFreeNet
 Categories:Phone & SMS
 License:GPLv3
 Web Site:https://whispersystems.org/
@@ -18,6 +19,8 @@ Using LibreSignal, you can communicate instantly while avoiding SMS fees, create
 * Open Source. LibreSignal is Free and Open Source, enabling anyone to verify its security by auditing the code. LibreSignal is the only private messenger that uses open source peer-reviewed cryptographic protocols to keep your messages safe.
 * Group Chat. LibreSignal allows you to create encrypted groups so you can have private conversations with all your friends at once. Not only are the messages encrypted, but the LibreSignal server never has access to any group metadata such as the membership list, group title, or group icon.
 * Fast. The LibreSignal protocol is designed to operate in the most constrained environment possible. Using LibreSignal, messages are instantly delivered to friends.
+
+Anti-Feature: Non-Free Network, since the former RedPhone servers (for phone calls) run proprietary software.
 .
 
 Repo Type:git
