@@ -1,11 +1,10 @@
 Categories:Phone & SMS
 License:GPLv3
-Web Site:https://whispersystems.org/
-Source Code:https://github.com/JavaJens/TextSecure/tree/feature/websocket-reborn
-Issue Tracker:https://github.com/JavaJens/TextSecure/issues
+Web Site:
+Source Code:https://github.com/LibreSignal/LibreSignal
+Issue Tracker:https://github.com/LibreSignal/LibreSignal/issues
 
-Name:LibreSignal (WebSocket)
-Auto Name:Signal
+Auto Name:LibreSignal
 Summary:Independent build of Signal (previously TextSecure & RedPhone) - uses WebSocket instead of GCM
 Description:
 IMPORTANT NEWS: Independent build of Signal (previously TextSecure & RedPhone) has been renamed, because of legal threats by Moxie Marlinspike (author of Signal).
@@ -23,168 +22,18 @@ This is WebSocket-based fork by JavaJens which doesn't require Google Play Servi
 .
 
 Repo Type:git
-Repo:https://github.com/JavaJens/TextSecure
+Repo:https://github.com/LibreSignal/LibreSignal
 
-Build:2.25.3-websocket,10145
-    commit=580280da900ae49421953df292778d2e8572f604
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_textsecure.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
-
-Build:2.26.1-websocket,10147
-    commit=631d8df88922a8ddae6da8d80137d6f1eec61867
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_textsecure.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
-
-Build:2.27.0-websocket,10152
-    commit=97d9e65043610d25cc928c59dc6aa3bcc17554d3
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_textsecure.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:28d3cb7/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:5be870e/d' build.gradle
-
-Build:3.0.1-websocket,10158
-    commit=d4f6b5faf63cbb3738cccb43c8969157252f5c72
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:56be70d/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:88dc977/d' build.gradle
-    buildjni=jni
-
-Build:3.3.1-websocket,10164
-    commit=95fae7701082eb3fa01f73ce5f7884843a7634f2
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:56be70d/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:88dc977/d' build.gradle
-    buildjni=jni
-
-Build:3.6.1-websocket,10174
-    commit=f5b82c9690a00a6d271c661a5361d32eaa2fd9c9
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:aec5fc5/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:b407ca6/d' build.gradle
-    buildjni=jni
-
-Build:3.8.1-websocket,10179
-    commit=48d2d8ed032ef6d270897ed3d89417e87e7e45e2
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:aec5fc5/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:b407ca6/d' build.gradle
-    buildjni=jni
-
-Build:3.9.1-websocket,10181
-    commit=6adec84f02189e4dfa3c47fb15966929ce90d40b
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:aec5fc5/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:b407ca6/d' build.gradle
-    buildjni=jni
-
-Build:3.12.0-websocket,10185
-    commit=56b483f1089a31a3957d5d3a81ad4e33ee260616
-    gradle=prod
-    forceversion=yes
-    forcevercode=yes
-    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    prebuild=git clone https://github.com/JavaJens/libtextsecure-java.git && \
-        cd libtextsecure-java && \
-        git checkout fix/maven_local && \
-        ./gradlew tasks installArchives && \
-        cd .. && \
-        rm -rf libtextsecure-java && \
-        ../../scripts/rename_signal.py . && \
-        sed -i 's/"FORCE_WEBSOCKETS", "false"/"FORCE_WEBSOCKETS", "true"/g' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-android:0405821/d' build.gradle && \
-        sed -i '/org.whispersystems:textsecure-java:d4ee0d0/d' build.gradle
-    buildjni=jni
+Build:3.14.2,190
+    commit=444c0db79b1bd91736479a9a0b4a33f961563399
+    submodules=yes
+    gradle=yes
+    prebuild=sed -i '/applicationId/d' build.gradle
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest/feature/websocket-reborn
+Update Check Mode:None
 Vercode Operation:%c+10000
 Update Check Name:org.thoughtcrime.securesms
-Current Version:3.12.0
-Current Version Code:10185
+Current Version:3.14.2
+Current Version Code:10190
 
