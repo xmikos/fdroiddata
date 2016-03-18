@@ -12,9 +12,9 @@ screen unlock pattern/PIN/password. You can have strong device encryption
 password (which you only need to enter once after booting your device) but
 simple pattern/PIN/password for unlocking your screen.
 
-If attacker tries to guess your simple pattern/PIN/password, he has only
-few tries (default is 3) after which the device is rebooted and he needs
-to enter your strong device encryption password again.
+If attacker tries to guess your simple pattern/PIN/password, he has only few
+tries (default is 3) after which the device is rebooted and he needs to enter
+your strong device encryption password again.
 .
 
 Repo Type:git
@@ -41,4 +41,3 @@ Auto Update Mode:Version v%v
 Update Check Mode:Tags
 Current Version:1.2
 Current Version Code:3
-
