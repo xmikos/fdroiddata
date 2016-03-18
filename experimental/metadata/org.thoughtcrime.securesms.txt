@@ -1,19 +1,27 @@
 Categories:Phone & SMS
 License:GPLv3
-Web Site:
+Web Site:https://github.com/LibreSignal/LibreSignal
 Source Code:https://github.com/LibreSignal/LibreSignal
 Issue Tracker:https://github.com/LibreSignal/LibreSignal/issues
 
+Name:LibreSignal (WebSocket)
 Auto Name:LibreSignal
 Summary:Independent build of Signal (previously TextSecure & RedPhone) - uses WebSocket instead of GCM
 Description:
-IMPORTANT NEWS: Independent build of Signal (previously TextSecure & RedPhone) has been renamed, because of legal threats by Moxie Marlinspike (author of Signal).
-For more info look at https://fdroid.eutopia.cz
+IMPORTANT NEWS: Independent build of Signal (previously TextSecure & RedPhone)
+has been renamed, because of legal threats by Moxie Marlinspike (author of
+Signal). For more info look at https://fdroid.eutopia.cz
 
-LibreSignal is a messaging app that allows you to take back your privacy while easily communicating with friends.
-Using LibreSignal, you can communicate instantly while avoiding SMS fees, create groups so that you can chat in real time with all your friends at once, and share media or attachments all with complete privacy. The server never has access to any of your communication and never stores any of your data.
+LibreSignal is a messaging app that allows you to take back your privacy while
+easily communicating with friends. Using LibreSignal, you can communicate
+instantly while avoiding SMS fees, create groups so that you can chat in real
+time with all your friends at once, and share media or attachments all with
+complete privacy. The server never has access to any of your communication and
+never stores any of your data.
 
-This is WebSocket-based fork by JavaJens which doesn't require Google Play Services to be installed (it doesn't use Google Cloud Messaging).
+This is WebSocket-based fork originally written by JavaJens
+(https://github.com/JavaJens/TextSecure) which doesn't require Google Play
+Services to be installed (it doesn't use Google Cloud Messaging).
 
 * Private. LibreSignal uses an advanced end to end encryption protocol that provides privacy for every message every time.
 * Open Source. LibreSignal is Free and Open Source, enabling anyone to verify its security by auditing the code. LibreSignal is the only private messenger that uses open source peer-reviewed cryptographic protocols to keep your messages safe.
@@ -24,16 +32,18 @@ This is WebSocket-based fork by JavaJens which doesn't require Google Play Servi
 Repo Type:git
 Repo:https://github.com/LibreSignal/LibreSignal
 
-Build:3.14.2,190
+Build:3.14.2-websocket,10190
     commit=444c0db79b1bd91736479a9a0b4a33f961563399
     submodules=yes
     gradle=yes
+    forceversion=yes
+    forcevercode=yes
     prebuild=sed -i '/applicationId/d' build.gradle
+    buildjni=jni
 
 Auto Update Mode:None
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Vercode Operation:%c+10000
 Update Check Name:org.thoughtcrime.securesms
 Current Version:3.14.2
 Current Version Code:10190
-
