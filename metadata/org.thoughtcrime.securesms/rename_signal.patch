@@ -1,0 +1,47 @@
+diff -u --new-file a/rename_signal.py b/rename_signal.py
+--- a/rename_signal.py	1970-01-01 01:00:00.000000000 +0100
++++ b/rename_signal.py	2016-04-05 18:00:00.000000000 +0200
+@@ -0,0 +1,43 @@
++#!/usr/bin/env python3
++
++import os, sys, re
++from pathlib import Path
++
++
++renames = [('Signal', 'LibreSignal'),
++           ('TextSecure', 'TextLibre'),
++           ('RedPhone', 'PhoneLibre')]
++re_string = re.compile(r'(?s)(<string.*?>)(.*?)(</string>)')
++
++
++def string_repl(match):
++    rename_group = match.group(2)
++    for oldname, newname in renames:
++        rename_group = rename_group.replace(oldname, newname)
++
++    return ''.join([
++        match.group(1),
++        rename_group,
++        match.group(3)
++    ])
++
++
++def update_strings(f):
++    oldfile = open(f).read()
++    newfile = re_string.sub(string_repl, oldfile)
++    with open(f, "w") as fd:
++        fd.write(newfile)
++
++
++def main():
++    basepath = sys.argv[1]
++
++    # Rename strings
++    for p in Path(basepath).glob('**/strings.xml'):
++        f = str(p)
++        print(f)
++        update_strings(f)
++
++
++if __name__ == '__main__':
++    main()
