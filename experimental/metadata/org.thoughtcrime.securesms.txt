@@ -68,9 +68,18 @@ Build:3.16.0-websocket,10194
     prebuild=sed -i '/applicationId/d' build.gradle
     buildjni=jni
 
+Build:3.16.1-websocket,10195
+    commit=44a762f852b70a8794bfc1d9d8b3e5aadc5cb503
+    submodules=yes
+    gradle=yes
+    forceversion=yes
+    forcevercode=yes
+    prebuild=sed -i '/applicationId/d' build.gradle
+    buildjni=jni
+
 Auto Update Mode:None
 Update Check Mode:Tags
 Vercode Operation:%c+10000
 Update Check Name:org.thoughtcrime.securesms
-Current Version:3.16.0
-Current Version Code:10194
+Current Version:3.16.1
+Current Version Code:10195

@@ -1,4 +1,4 @@
-AntiFeatures:NonFreeNet
+AntiFeatures:NonFreeNet,NonFreeDep
 Categories:Phone & SMS
 License:GPLv3
 Web Site:https://whispersystems.org/
@@ -25,7 +25,10 @@ never stores any of your data.
 * Group Chat. LibreSignal allows you to create encrypted groups so you can have private conversations with all your friends at once. Not only are the messages encrypted, but the LibreSignal server never has access to any group metadata such as the membership list, group title, or group icon.
 * Fast. The LibreSignal protocol is designed to operate in the most constrained environment possible. Using LibreSignal, messages are instantly delivered to friends.
 
-Anti-Feature: Non-Free Network, since the former RedPhone servers (for phone calls) run proprietary software.
+Anti-Features:
+
+* Non-Free Network, since the former RedPhone servers (for phone calls) run proprietary software
+* Non-Free Dependencies, since the application needs Google Play Services
 .
 
 Repo Type:git
@@ -181,21 +184,32 @@ Build:3.14.2,190
 
 Build:3.15.2,193
     commit=v3.15.2
+    patch=rename_signal.patch
     gradle=yes
     rm=libs/armeabi,libs/armeabi-v7a,libs/x86
-    patch=rename_signal.patch
-    prebuild=chmod +x ./rename_signal.py && ./rename_signal.py .
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
     buildjni=jni
 
 Build:3.16.0,194
     commit=v3.16.0
+    patch=rename_signal.patch
     gradle=yes
     rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
+    buildjni=jni
+
+Build:3.16.1,195
+    commit=v3.16.1
     patch=rename_signal.patch
-    prebuild=chmod +x ./rename_signal.py && ./rename_signal.py .
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
     buildjni=jni
 
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:3.16.0
-Current Version Code:194
+Current Version:3.16.1
+Current Version Code:195
