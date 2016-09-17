@@ -209,7 +209,34 @@ Build:3.16.1,195
         ./rename_signal.py .
     buildjni=jni
 
+Build:3.18.1,198
+    commit=v3.18.1
+    patch=rename_signal.patch
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
+    buildjni=jni
+
+Build:3.18.3,200
+    commit=v3.18.3
+    patch=rename_signal.patch
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
+    buildjni=jni
+
+Build:3.19.0,201
+    commit=v3.19.0
+    patch=rename_signal.patch
+    gradle=yes
+    rm=libs/armeabi,libs/armeabi-v7a,libs/x86
+    prebuild=chmod +x ./rename_signal.py && \
+        ./rename_signal.py .
+    buildjni=jni
+
 Auto Update Mode:Version v%v
 Update Check Mode:Tags
-Current Version:3.16.1
-Current Version Code:195
+Current Version:3.19.0
+Current Version Code:201
