@@ -21,7 +21,7 @@ What is LibreSignal?
 LibreSignal is independent build of excellent [Signal](https://whispersystems.org) private messenger
 by Open Whisper Systems. It is built from official source code, only renamed to LibreSignal.
 
-Why have Signal been renamed to LibreSignal?
+Why has Signal been renamed to LibreSignal?
 --------------------------------------------
 
 Moxie Marlinspike (author of Signal) apparently doesn't like the idea of independent builds of Signal so much,
