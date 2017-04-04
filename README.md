@@ -47,12 +47,8 @@ There has been experimental repository with WebSocket fork of LibreSignal in the
 with LibreSignal version 3.30.0, it is not needed anymore. Official Signal (and therefore LibreSignal) now
 finally works without Google Play Services too.
 
-If you want also encrypted voice and video calls to work without Google Play Services, both you and the other side
-have to enable *Video calling beta* option in *Settings -> Advanced*.
-See [Video calls for Signal now in public beta](https://whispersystems.org/blog/signal-video-calls-beta) for more information.
-
-Motivation
-----------
+History
+-------
 
 My primary motivation for creating this repository has been the absence of
 [TextSecure](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms)
@@ -63,6 +59,13 @@ but nevertheless they did.
 
 There has been big discussion about it
 (issue [#127](https://github.com/WhisperSystems/TextSecure/issues/127)), but simply told, Moxie
-has not been open to arguments and wanted TextSecure to be distributed only via Google Play. He already locked this
-discussion. This has been unacceptable for me, because applications installed from Google Play can be silently
+has not been open to arguments and wanted TextSecure to be distributed only via Google Play.
+This has been unacceptable for me, because applications installed from Google Play can be silently
 updated without user knowing about it, e.g. to version with hidden backdoor.
+
+After 4 years this issue has been finally fixed and you can download
+official Signal app outside of Google Play from [here](https://signal.org/android/apk/). This
+Signal build has its own update mechanism and updates itself from https://updates.signal.org/android/latest.json.
+
+This repository continues to provide independent builds of Signal, with update URL changed to
+https://fdroid.eutopia.cz/updates/libresignal.json.
