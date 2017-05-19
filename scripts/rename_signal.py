@@ -9,7 +9,7 @@ renames = [('Signal', 'LibreSignal'),
            ('RedPhone', 'PhoneLibre')]
 re_string = re.compile(r'(?s)(<string.*?>)(.*?)(</string>)')
 
-replacement_url = 'https://fdroid.eutopia.cz/updates/libresignal.json'
+replacement_url = 'https://fdroid.eutopia.cz/updates/libresignal'
 re_url = re.compile(r'(ext[.]websiteUpdateUrl\s*=\s*")(http[s]?://.+?)(")')
 
 

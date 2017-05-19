@@ -68,4 +68,4 @@ official Signal app outside of Google Play from [here](https://signal.org/androi
 Signal build has its own update mechanism and updates itself from https://updates.signal.org/android/latest.json.
 
 This repository continues to provide independent builds of Signal, with update URL changed to
-https://fdroid.eutopia.cz/updates/libresignal.json.
+https://fdroid.eutopia.cz/updates/libresignal/latest.json.
